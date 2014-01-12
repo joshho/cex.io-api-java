@@ -62,11 +62,11 @@ public class cexapi {
 		return Hex.encodeHexString(hmacBytes);
 	}
 
-	public Object api_call(String method, HashMap<String,String> hmap, Integer authData){ // api call (Middle level)
+	private Object api_call(String method, HashMap<String,String> hmap, Integer authData){ // api call (Middle level)
 		return api_call(method, hmap, authData, null);
 	}
 
-	public Object api_call(String method, HashMap<String,String> hmap, Integer authData, String couple){ // api call (Middle level)
+	private Object api_call(String method, HashMap<String,String> hmap, Integer authData, String couple){ // api call (Middle level)
 		if(hmap == null){hmap = new HashMap<String, String>();}
 		String path = "/api/" + method + "/";//generate url
 		Object answer = null;
